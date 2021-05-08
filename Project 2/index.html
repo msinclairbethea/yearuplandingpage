@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>   
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>YearUp Landing Page</title>
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+crossorigin="anonymous"
+/>
+<link
+href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap"
+rel="stylesheet"
+/>
+<link
+href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+rel="stylesheet"
+/>
+
+
+<style>
+body {
+overflow: hidden;
+font-family: 'Acme',Arial;
+background: url(students.jpg) no-repeat center center scroll;
+background-size: cover;
+height: 100vh !important;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: gold;
+    font-weight: bold;
+  
+  }
+  li{
+      display: inline;
+      float:left;
+  }
+  li a {
+    display: block;
+    color: black;
+    padding: 20px;
+    text-decoration:none;
+  }
+  li a:hover {
+    background-color: lightyellow;
+  }
+
+.heading {
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
+padding-bottom: -5px;
+}
+.main {
+height: 100vh !important;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+padding: 20px;
+}
+
+.main div {
+border-radius: 0px !important;
+background: rgb(255, 232, 28);
+width: 90%;
+max-width: 450px;
+height: auto;
+position: relative;
+border: 1px white solid;
+box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+text-align: center;
+font-size: 50px;
+}
+.clockpart
+{
+padding:0px !important;
+min-width:60px !important;
+
+display: inline-block;
+}
+.clockmin
+{
+padding:0px !important;
+width:5px !important;
+min-width:5px !important;
+
+display: inline-block;
+}
+
+
+
+</style>
+</head>
+<body>
+    <header>
+        
+       <!--Header-->
+<div style="background-color:rgb(25, 205, 250);color:whitesmoke;padding:10px;">
+    <img src="yearuplogo.png" class="logo"style=height:120px;>
+<div class = "heading">
+    <h1>The path to your future starts now</h1>
+    <h2>Become a working professional in just 1 Year!</h2>
+
+
+</div>
+    </div>
+     
+     <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+    
+        
+        </div>
+        </nav>
+
+
+<!-- Links -->
+<nav>
+<ul>
+<li><a class="active" href="https://www.yearup.org/">Home</a></li>
+<li><a href="https://www.yearup.org/about">About</a></li>
+<li><a href="https://www.yearup.org/students/what-you-can-learn">Career Tracks</a></li>
+<li><a href="https://www.yearup.org/about/contact">Contact</a></li>
+</ul> 
+</nav>
+</div>
+
+<!-- Mask -->
+<div id="intro" class="view">
+
+<div class="mask">
+
+</div>
+
+</div>
+<!--/.Mask-->
+
+</header>
+
+
+
+<div class="main">
+<div class="clockContainer">
+<p id="date"></p>
+<p id="time"></p>
+<span id="hours" class="clockpart"></span>
+<span id="colon1" class="clockmin"></span>
+<span id="minutes" class="clockpart"></span>
+<span id="colon2" class="clockmin"> </span>
+<span id="seconds" class="clockpart"></span>
+<span id="ampm" class="clockpart"></span>
+</div>
+</div>
+<script>
+var myVar = setInterval(myTimer, 1000);
+var hours = ["12",
+"01","02","03","04","05","06","07","08","09","10","11","12",
+"01","02","03","04","05","06","07","08","09","10","11"];
+var months = [
+"January",
+"February",
+"March",
+"April",
+"May",
+"June",
+"July",
+"August",
+"September",
+"October",
+"November",
+"December",
+];
+function myTimer() {
+var date = new Date();
+document.getElementById("date").innerHTML =
+date.getDate() +
+"-" +
+months[date.getMonth()] +
+"-" +
+date.getFullYear();
+document.getElementById("hours").innerHTML = hours[date.getHours()];
+document.getElementById("minutes").innerHTML = date.getMinutes()<10?"0"+date.getMinutes() :date.getMinutes();
+document.getElementById("seconds").innerHTML = date.getSeconds()<10?"0"+date.getSeconds() :date.getSeconds();
+document.getElementById("ampm").innerHTML = date.getHours()<12?"AM":"PM";
+
+if (document.getElementById("colon1").innerHTML.includes(":"))
+{
+
+document.getElementById("colon2").innerHTML = "";
+document.getElementById("colon1").innerHTML = "";
+}
+else
+{
+
+document.getElementById("colon2").innerHTML = ":";
+document.getElementById("colon1").innerHTML = ":";
+}
+
+}
+</script>
+
+<!--Main layout-->
+
+<main>
+    <main class="mt-5">
+        <div class="container">
+            <div class="content--">
+                <div class="wrapper"></div>
+            
+        </div>
+    
+    
+        <!--Section: Why YearUP-->
+            <section id="heading" class="text-center">
+
+    <!--Content-->
+
+
+            <div style="background-color:rgb(110, 214, 255);color:whitesmoke;padding: 10px; opacity: 0.7;">
+                <h2><u><b>Why YearUp?</b></u></h2>
+            
+                <p>Six Month Corporate Internship</p>
+                <p>Earn While Your Learn</p>
+                <p>Courses elgible for college credit </p>
+                <p>Professional Development Training</p>
+                <p>Build a Portfolio</p>
+                <p>Be apart of a community</p>
+                
+                </div>
+           
+                </div>
+            
+            </div>
+
+
+        </section>       
+
+</main>
+<!--Main layout-->
+
+<!--Footer-->
+<footer>
+
+    <!-- Social Icon -->
+
+    <ul class="navbar-nav nav-flex-icons">
+    <li class="nav-item">
+        <a href="https://www.facebook.com/yearup.newyork/?rf=162058083812472" class="fa fa-facebook"></a>
+    </li>
+    <li class="nav-item">
+        <a href="https://twitter.com/yearupnewyork?lang=en" class="fa fa-twitter"></a>
+    </li>
+    <li class="nav-item">
+        <a href="https://www.instagram.com/yearup/?hl=en" class="fa fa-instagram"></a>
+    </li>
+</ul>
+
+
+</footer>
+
+<p>Sign Up Now!</p>
+<a href="https://www.yearup.org/seize-opportunity" target="_blank">
+            <button>Become a Student</button>
+
+
+
+            <p>@Marisa Sinclair Bethea 2021</p>
+
+
+<!--Footer-->
+
+
+</body>
+</html>
